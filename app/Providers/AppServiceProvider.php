@@ -35,5 +35,21 @@ class AppServiceProvider extends ServiceProvider
             'App\Contracts\YoutubeInerface',
             'App\Services\YoutubeService'
         );
+        $this->app->bind(
+            'App\Contracts\GalleryInterface',
+            'App\Services\GalleryService'
+        );
+        $this->app->bind(
+            'App\Contracts\PageInterface',
+            'App\Services\PageService'
+        );
+        $this->app->bind(
+            'App\Contracts\SubMenuInterface',
+            'App\Services\SubMenuService'
+        );
+        $this->app->bind(
+            'App\Contracts\LanguageInterface',
+            'App\Services\LanguageService'
+        );
     }
 }

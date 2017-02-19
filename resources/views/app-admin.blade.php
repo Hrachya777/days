@@ -9,8 +9,6 @@
 	{!! HTML::style( asset('assets/admin/plugins/css/ace.css')) !!}
 
 
-
-
 </head>
 <body  class="no-skin">
 
@@ -318,6 +316,74 @@
 
 					<li class="">
 						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-folder-open-o"></i>
+							<span class="menu-text">
+								Pages
+							</span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="">
+								<a href="{{action('AdminController@getAddPage')}}">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Add pages
+								</a>
+							</li>
+
+							<li class="">
+								<a href="{{action('AdminController@getPageList')}}">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Page List
+								</a>
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="{{action('AdminController@getSubMenu')}}">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Add Sub Menu
+								</a>
+								<b class="arrow"></b>
+							</li>
+						</ul>
+					</li>
+					<li class="">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-language"></i>
+							<span class="menu-text">
+								Languages
+							</span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="">
+								<a href="{{action('AdminController@getLanguage')}}">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Add languages
+								</a>
+							</li>
+
+							<li class="">
+								<a href="{{action('AdminController@getLanguageList')}}">
+									<i class="menu-icon fa fa-caret-right"></i>
+									languages List
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+							
+						</ul>
+					</li>
+
+					<li class="">
+						<a href="#" class="dropdown-toggle">
 							<i class="menu-icon fa fa-file-text-o"></i>
 							<span class="menu-text">
 								Articles
@@ -348,28 +414,44 @@
 						</ul>
 					</li>
 
-					
+					<li class="">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-picture-o"></i>
+							<span class="menu-text">
+								Gallery
+							</span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="">
+								<a href="{{action('AdminController@getGallery')}}">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Gallery List
+								</a>
+							</li>
+							<li class="">
+								<a href="{{action('AdminController@getAddGallery')}}">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Add Gallery
+								</a>
+								<b class="arrow"></b>
+							</li>
+							
+						</ul>
+						
+					</li>
 
 					<li class="">
 						<a href="{{action('AdminController@getYoutube')}}">
 							<i class="menu-icon fa fa-youtube-play"></i>
 							<span class="menu-text"> youtube </span>
 						</a>
-
 						<b class="arrow"></b>
 					</li>
-
-
-
-					<li class="">
-						<a href="gallery.html">
-							<i class="menu-icon fa fa-picture-o"></i>
-							<span class="menu-text"> Gallery </span>
-						</a>
-
-						<b class="arrow"></b>
-					</li>
-
 
 				</ul><!-- /.nav-list -->
 
@@ -467,7 +549,13 @@
 	{!! HTML::script( asset('assets/admin/plugins/js/ace-extra.js') ) !!} 
 	{!! HTML::script( asset('assets/admin/plugins/js/jquery.mobile.custom.js') ) !!} 
 
-	{!! HTML::script( asset('assets/admin/plugins/js/bootstrap.js') ) !!} 
+	{!! HTML::script( asset('assets/admin/plugins/js/bootstrap.js') ) !!}
+
+		{!! HTML::script( asset('assets/admin/plugins/js/date-time/bootstrap-datepicker.js') ) !!}
+	{!! HTML::script( asset('assets/admin/plugins/js/jqGrid/jquery.jqGrid.src.js') ) !!} 
+	{!! HTML::script( asset('assets/admin/plugins/js/jqGrid/i18n/grid.locale-en.js') ) !!} 
+
+	{!! HTML::script( asset('assets/admin/plugins/js/jquery.colorbox.js') ) !!}  
 	{!! HTML::script( asset('assets/admin/plugins/js/jquery-ui.custom.js') ) !!} 
 	{!! HTML::script( asset('assets/admin/plugins/js/jquery.ui.touch-punch.js') ) !!} 
 	{!! HTML::script( asset('assets/admin/plugins/js/jquery.easypiechart.js') ) !!} 
@@ -511,6 +599,7 @@
 
 	@yield('script')
 
+	{!! HTML::script(asset('assets/admin/js/main.js') ) !!} 
 
 
 </body>
